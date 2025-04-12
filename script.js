@@ -18,7 +18,7 @@ function getRandomArbitrary(min, max) {
   let cached;
   cached = Math.random() * (max - min) + min;
   cached = Math.floor(cached);
-  consolle.log(cached);
+  console.log(cached);
   return cached;
 }
 
@@ -59,6 +59,7 @@ async function getSHA256Hash() {
 async function main() {
   sha256HashView.innerHTML = 'Calculating...';
   const hash = await getSHA256Hash();
+  console.log(hash)
   sha256HashView.innerHTML = hash;
 }
 
